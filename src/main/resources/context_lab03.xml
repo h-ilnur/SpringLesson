@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="ru.khairullin.spring.day01.lab03.ShakespearQuoter" name="shakespearQuoter" scope="prototype">
+        <property name="quote" value="2b|!2b"/>
+    </bean>
+
+    <bean class="ru.khairullin.spring.day01.lab03.TerminatorQuoter" name="terminatorQuoter" scope="prototype">
+        <property name="quotes">
+            <list>
+                <value>I'll be back</value>
+                <value>Astalavista baby</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="ru.khairullin.spring.day01.lab03.TalkRobot" name="TalkingRobot" init-method="talk">
+        <property name="quoters">
+            <list>
+                <ref bean="shakespearQuoter"/>
+                <ref bean="terminatorQuoter"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="ru.khairullin.spring.day01.lab02.ShakespearQuoter" name="ShakespeareQuoter">
+        <property name="quote" value="2b|!2b"/>
+    </bean>
+
+    <bean class="ru.khairullin.spring.day01.lab02.TerminatorQuoter" name="TerminatorQuoter">
+        <property name="quotes">
+            <list>
+                <value>I'll be back</value>
+                <value>Astalavista baby</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>
